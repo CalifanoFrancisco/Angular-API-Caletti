@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1> Register </h1>
+        <div>
+            <p>Nombre de usuario: </p>
+            <input type="text"     (keyup)="getName($event)"> 
+        </div>
+        <div>
+            <p>Email: </p>
+            <input type="text"     (keyup)="getMail($event)">
+        </div>
+        <div>
+            <p> Contraseña: </p>
+            <input type="password" (keyup)="getPass($event)">
+        </div>
+        <div>
+            <p> Corroborar contraseña: </p>
+            <input type="password" (keyup)="getPas2($event)">
+        </div>
+        <div>
+            <p color="red"> {{msg}} </p>
+            <button type="button" (click)="submitData()"> Submit </button>
+        </div>
+    </div>
+</body>
+</html>

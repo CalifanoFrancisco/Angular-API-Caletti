@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <div>
+         <!--
+        <button type="button" (click)="getProfile()"> Profile </button>
+         -->
+        <button type="button" (click)="logout()"> Logout </button>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="column">
+            Virus: 
+            <div id="case">
+                <input type="text" placeholder="Id" (keyup)="getId($event)">
+                <div id="caseVirus">
+                    <input type="text" placeholder="Nombre cientifico" (keyup)="getSciName($event)">  <br>
+                    <input type="text" placeholder="Tipo de virus"     (keyup)="getVirusType($event)"> <br>
+                    <input type="text" placeholder="Tiene vacuna? s/n" (keyup)="getVaccine($event)"> <br>
+                </div>
+                <input type="text" placeholder="Edad"             (keyup)="getAge($event)"> <br>
+                <input type="text" placeholder="Genero"           (keyup)="getGender($event)"><br>
+                <input type="text" placeholder="Ubicacion"        (keyup)="getLocation($event)"><br>
+                <input type="text" placeholder="Estado/Provincia" (keyup)="getState($event)"><br>
+    
+            </div>
+            <h4> {{msg}} </h4>
+            <button type="button" (click)="getCases()">           Get                  </button>
+            <button type="button" (click)="getCaseById()">        Get case by id       </button>
+            <button type="button" (click)="getCasesByAge()">      Get case by age      </button>
+            <br>
+            <button type="button" (click)="getCasesByVirus()">    Get cases by virus   </button>
+            <button type="button" (click)="getVirusHasVaccine()"> Get vaccine          </button>
+            <br>
+            <button type="button" (click)="addNewCase()">         Add                  </button>
+            <button type="button" (click)="updateCase()">         Update case          </button>
+            <button type="button" (click)="updateVirus()">        Update virus         </button>
+            <button type="button" (click)="deleteCaseById()">     Delete               </button>
+        </div>
+        <div id="columna2"class="column">
+            Info:
+            <div id="helo" class="data_container" [innerHtml]="htmlToAdd">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+      
+    </div>
+</body>
+</html>
